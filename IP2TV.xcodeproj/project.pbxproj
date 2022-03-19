@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8148DAE327E249000025863A /* IP2TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE227E249000025863A /* IP2TVApp.swift */; };
+		8148DAE527E249000025863A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE427E249000025863A /* ContentView.swift */; };
+		8148DAE727E249010025863A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8148DAE627E249010025863A /* Assets.xcassets */; };
+		8148DAEA27E249010025863A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8148DAE927E249010025863A /* Preview Assets.xcassets */; };
+		8148DAF427E249020025863A /* IP2TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAF327E249020025863A /* IP2TVTests.swift */; };
+		8148DAFE27E249020025863A /* IP2TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAFD27E249020025863A /* IP2TVUITests.swift */; };
+		8148DB0027E249020025863A /* IP2TVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAFF27E249020025863A /* IP2TVUITestsLaunchTests.swift */; };
+		8148DB1027E24AF50025863A /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DB0F27E24AF50025863A /* MediaItem.swift */; };
+		8148DB1227E37AF10025863A /* AddPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DB1127E37AF10025863A /* AddPlaylistView.swift */; };
+		8173511C27E4B052007B99AD /* PlaylistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173511B27E4B052007B99AD /* PlaylistService.swift */; };
+		8173511F27E4B3A7007B99AD /* IP2TVModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8173511D27E4B3A6007B99AD /* IP2TVModel.xcdatamodeld */; };
+		8173515E27E4B653007B99AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173515D27E4B653007B99AD /* Persistence.swift */; };
+		8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */; };
+		819724FF27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */; };
+		8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */; };
+		81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */; };
+		81E0AD1027E3CBFB00353EE2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD0F27E3CBFB00353EE2 /* Service.swift */; };
+		81E0AD1227E3CD9C00353EE2 /* PlaylistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD1127E3CD9C00353EE2 /* PlaylistsViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8148DAF027E249020025863A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8148DAD727E248FF0025863A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8148DADE27E248FF0025863A;
+			remoteInfo = IP2TV;
+		};
+		8148DAFA27E249020025863A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8148DAD727E248FF0025863A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8148DADE27E248FF0025863A;
+			remoteInfo = IP2TV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8148DADF27E249000025863A /* IP2TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IP2TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8148DAE227E249000025863A /* IP2TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVApp.swift; sourceTree = "<group>"; };
+		8148DAE427E249000025863A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8148DAE627E249010025863A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8148DAE927E249010025863A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8148DAEF27E249020025863A /* IP2TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IP2TVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8148DAF327E249020025863A /* IP2TVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVTests.swift; sourceTree = "<group>"; };
+		8148DAF927E249020025863A /* IP2TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IP2TVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8148DAFD27E249020025863A /* IP2TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVUITests.swift; sourceTree = "<group>"; };
+		8148DAFF27E249020025863A /* IP2TVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8148DB0F27E24AF50025863A /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		8148DB1127E37AF10025863A /* AddPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaylistView.swift; sourceTree = "<group>"; };
+		8173511B27E4B052007B99AD /* PlaylistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistService.swift; sourceTree = "<group>"; };
+		8173511E27E4B3A6007B99AD /* IP2TVModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IP2TVModel.xcdatamodel; sourceTree = "<group>"; };
+		8173515D27E4B653007B99AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+ChannelsView.swift"; sourceTree = "<group>"; };
+		819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseM3uFileToMediaItemList.swift; sourceTree = "<group>"; };
+		8197250027E52F7F00E7BA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistListView.swift; sourceTree = "<group>"; };
+		81E0AD0F27E3CBFB00353EE2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		81E0AD1127E3CD9C00353EE2 /* PlaylistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8148DADC27E248FF0025863A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAEC27E249020025863A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAF627E249020025863A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8148DAD627E248FF0025863A = {
+			isa = PBXGroup;
+			children = (
+				8148DAE127E249000025863A /* IP2TV */,
+				8148DAF227E249020025863A /* IP2TVTests */,
+				8148DAFC27E249020025863A /* IP2TVUITests */,
+				8148DAE027E249000025863A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8148DAE027E249000025863A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8148DADF27E249000025863A /* IP2TV.app */,
+				8148DAEF27E249020025863A /* IP2TVTests.xctest */,
+				8148DAF927E249020025863A /* IP2TVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8148DAE127E249000025863A /* IP2TV */ = {
+			isa = PBXGroup;
+			children = (
+				8197250027E52F7F00E7BA36 /* Info.plist */,
+				8148DAE227E249000025863A /* IP2TVApp.swift */,
+				8148DB0E27E24ADB0025863A /* Model */,
+				8148DAE627E249010025863A /* Assets.xcassets */,
+				81E0AD1427E3CDFE00353EE2 /* Views */,
+				8148DAE827E249010025863A /* Preview Content */,
+			);
+			path = IP2TV;
+			sourceTree = "<group>";
+		};
+		8148DAE827E249010025863A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8148DAE927E249010025863A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8148DAF227E249020025863A /* IP2TVTests */ = {
+			isa = PBXGroup;
+			children = (
+				8148DAF327E249020025863A /* IP2TVTests.swift */,
+			);
+			path = IP2TVTests;
+			sourceTree = "<group>";
+		};
+		8148DAFC27E249020025863A /* IP2TVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8148DAFD27E249020025863A /* IP2TVUITests.swift */,
+				8148DAFF27E249020025863A /* IP2TVUITestsLaunchTests.swift */,
+			);
+			path = IP2TVUITests;
+			sourceTree = "<group>";
+		};
+		8148DB0E27E24ADB0025863A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8148DB0F27E24AF50025863A /* MediaItem.swift */,
+				81E0AD0F27E3CBFB00353EE2 /* Service.swift */,
+				81E0AD1127E3CD9C00353EE2 /* PlaylistsViewModel.swift */,
+				8173511B27E4B052007B99AD /* PlaylistService.swift */,
+				8173511D27E4B3A6007B99AD /* IP2TVModel.xcdatamodeld */,
+				8173515D27E4B653007B99AD /* Persistence.swift */,
+				819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81E0AD1427E3CDFE00353EE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8148DAE427E249000025863A /* ContentView.swift */,
+				81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */,
+				8148DB1127E37AF10025863A /* AddPlaylistView.swift */,
+				8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */,
+				8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8148DADE27E248FF0025863A /* IP2TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8148DB0327E249020025863A /* Build configuration list for PBXNativeTarget "IP2TV" */;
+			buildPhases = (
+				8148DADB27E248FF0025863A /* Sources */,
+				8148DADC27E248FF0025863A /* Frameworks */,
+				8148DADD27E248FF0025863A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IP2TV;
+			productName = IP2TV;
+			productReference = 8148DADF27E249000025863A /* IP2TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8148DAEE27E249020025863A /* IP2TVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8148DB0627E249020025863A /* Build configuration list for PBXNativeTarget "IP2TVTests" */;
+			buildPhases = (
+				8148DAEB27E249020025863A /* Sources */,
+				8148DAEC27E249020025863A /* Frameworks */,
+				8148DAED27E249020025863A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8148DAF127E249020025863A /* PBXTargetDependency */,
+			);
+			name = IP2TVTests;
+			productName = IP2TVTests;
+			productReference = 8148DAEF27E249020025863A /* IP2TVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8148DAF827E249020025863A /* IP2TVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8148DB0927E249020025863A /* Build configuration list for PBXNativeTarget "IP2TVUITests" */;
+			buildPhases = (
+				8148DAF527E249020025863A /* Sources */,
+				8148DAF627E249020025863A /* Frameworks */,
+				8148DAF727E249020025863A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8148DAFB27E249020025863A /* PBXTargetDependency */,
+			);
+			name = IP2TVUITests;
+			productName = IP2TVUITests;
+			productReference = 8148DAF927E249020025863A /* IP2TVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8148DAD727E248FF0025863A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8148DADE27E248FF0025863A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8148DAEE27E249020025863A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8148DADE27E248FF0025863A;
+					};
+					8148DAF827E249020025863A = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8148DADE27E248FF0025863A;
+					};
+				};
+			};
+			buildConfigurationList = 8148DADA27E248FF0025863A /* Build configuration list for PBXProject "IP2TV" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8148DAD627E248FF0025863A;
+			productRefGroup = 8148DAE027E249000025863A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8148DADE27E248FF0025863A /* IP2TV */,
+				8148DAEE27E249020025863A /* IP2TVTests */,
+				8148DAF827E249020025863A /* IP2TVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8148DADD27E248FF0025863A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8148DAEA27E249010025863A /* Preview Assets.xcassets in Resources */,
+				8148DAE727E249010025863A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAED27E249020025863A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAF727E249020025863A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8148DADB27E248FF0025863A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E0AD1027E3CBFB00353EE2 /* Service.swift in Sources */,
+				8148DB1027E24AF50025863A /* MediaItem.swift in Sources */,
+				8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */,
+				8148DB1227E37AF10025863A /* AddPlaylistView.swift in Sources */,
+				8173511C27E4B052007B99AD /* PlaylistService.swift in Sources */,
+				81E0AD1227E3CD9C00353EE2 /* PlaylistsViewModel.swift in Sources */,
+				819724FF27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift in Sources */,
+				8148DAE527E249000025863A /* ContentView.swift in Sources */,
+				8173511F27E4B3A7007B99AD /* IP2TVModel.xcdatamodeld in Sources */,
+				81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */,
+				8173515E27E4B653007B99AD /* Persistence.swift in Sources */,
+				8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */,
+				8148DAE327E249000025863A /* IP2TVApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAEB27E249020025863A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8148DAF427E249020025863A /* IP2TVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8148DAF527E249020025863A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8148DB0027E249020025863A /* IP2TVUITestsLaunchTests.swift in Sources */,
+				8148DAFE27E249020025863A /* IP2TVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8148DAF127E249020025863A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8148DADE27E248FF0025863A /* IP2TV */;
+			targetProxy = 8148DAF027E249020025863A /* PBXContainerItemProxy */;
+		};
+		8148DAFB27E249020025863A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8148DADE27E248FF0025863A /* IP2TV */;
+			targetProxy = 8148DAFA27E249020025863A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8148DB0127E249020025863A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+			};
+			name = Debug;
+		};
+		8148DB0227E249020025863A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8148DB0427E249020025863A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IP2TV/Preview Content\"";
+				DEVELOPMENT_TEAM = 5FK8753786;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IP2TV/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		8148DB0527E249020025863A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IP2TV/Preview Content\"";
+				DEVELOPMENT_TEAM = 5FK8753786;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IP2TV/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		8148DB0727E249020025863A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5FK8753786;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IP2TV.app/IP2TV";
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+			};
+			name = Debug;
+		};
+		8148DB0827E249020025863A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5FK8753786;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IP2TV.app/IP2TV";
+				TVOS_DEPLOYMENT_TARGET = 15.2;
+			};
+			name = Release;
+		};
+		8148DB0A27E249020025863A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5FK8753786;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = IP2TV;
+			};
+			name = Debug;
+		};
+		8148DB0B27E249020025863A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5FK8753786;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = IP2TV;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8148DADA27E248FF0025863A /* Build configuration list for PBXProject "IP2TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8148DB0127E249020025863A /* Debug */,
+				8148DB0227E249020025863A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8148DB0327E249020025863A /* Build configuration list for PBXNativeTarget "IP2TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8148DB0427E249020025863A /* Debug */,
+				8148DB0527E249020025863A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8148DB0627E249020025863A /* Build configuration list for PBXNativeTarget "IP2TVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8148DB0727E249020025863A /* Debug */,
+				8148DB0827E249020025863A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8148DB0927E249020025863A /* Build configuration list for PBXNativeTarget "IP2TVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8148DB0A27E249020025863A /* Debug */,
+				8148DB0B27E249020025863A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8173511D27E4B3A6007B99AD /* IP2TVModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8173511E27E4B3A6007B99AD /* IP2TVModel.xcdatamodel */,
+			);
+			currentVersion = 8173511E27E4B3A6007B99AD /* IP2TVModel.xcdatamodel */;
+			path = IP2TVModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8148DAD727E248FF0025863A /* Project object */;
+}
