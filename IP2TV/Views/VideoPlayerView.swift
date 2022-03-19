@@ -17,12 +17,10 @@ struct VideoPlayerView: View {
     
     var body: some View {
 //        let playerUrl = URL(string: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8")
-//
         
         let playerUrl = URL(string: "http://efv.me:80/ViniciusValvassori/j7SCr5/13253")
 
         
-        //url.replacingOccurrences(of: "\r", with: ""))
         if playerUrl != nil {
         VideoPlayer(player: player)
             //adapt for 4k??, insert resolution based on device

@@ -62,7 +62,7 @@
 		8173515D27E4B653007B99AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+ChannelsView.swift"; sourceTree = "<group>"; };
 		819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseM3uFileToMediaItemList.swift; sourceTree = "<group>"; };
-		8197250027E52F7F00E7BA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8197250027E52F7F00E7BA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistListView.swift; sourceTree = "<group>"; };
 		81E0AD0F27E3CBFB00353EE2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -94,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812C04C827E6A4B300799F93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8197250027E52F7F00E7BA36 /* Info.plist */,
+				8148DAE227E249000025863A /* IP2TVApp.swift */,
+				8148DAE627E249010025863A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8148DAD627E248FF0025863A = {
 			isa = PBXGroup;
 			children = (
@@ -117,10 +127,8 @@
 		8148DAE127E249000025863A /* IP2TV */ = {
 			isa = PBXGroup;
 			children = (
-				8197250027E52F7F00E7BA36 /* Info.plist */,
-				8148DAE227E249000025863A /* IP2TVApp.swift */,
+				812C04C827E6A4B300799F93 /* Resources */,
 				8148DB0E27E24ADB0025863A /* Model */,
-				8148DAE627E249010025863A /* Assets.xcassets */,
 				81E0AD1427E3CDFE00353EE2 /* Views */,
 				8148DAE827E249010025863A /* Preview Content */,
 			);
