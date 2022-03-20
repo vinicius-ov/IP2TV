@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812C04CC27E6A9DC00799F93 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 812C04CB27E6A9DC00799F93 /* Cartfile */; };
 		8148DAE327E249000025863A /* IP2TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE227E249000025863A /* IP2TVApp.swift */; };
 		8148DAE527E249000025863A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE427E249000025863A /* ContentView.swift */; };
 		8148DAE727E249010025863A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8148DAE627E249010025863A /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		812C04CB27E6A9DC00799F93 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		8148DADF27E249000025863A /* IP2TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IP2TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8148DAE227E249000025863A /* IP2TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVApp.swift; sourceTree = "<group>"; };
 		8148DAE427E249000025863A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		812C04C827E6A4B300799F93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				812C04CB27E6A9DC00799F93 /* Cartfile */,
 				8197250027E52F7F00E7BA36 /* Info.plist */,
 				8148DAE227E249000025863A /* IP2TVApp.swift */,
 				8148DAE627E249010025863A /* Assets.xcassets */,
@@ -196,6 +199,8 @@
 				8148DADB27E248FF0025863A /* Sources */,
 				8148DADC27E248FF0025863A /* Frameworks */,
 				8148DADD27E248FF0025863A /* Resources */,
+				812C04C927E6A89700799F93 /* Carthage */,
+				812C04CA27E6A94F00799F93 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -290,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812C04CC27E6A9DC00799F93 /* Cartfile in Resources */,
 				8148DAEA27E249010025863A /* Preview Assets.xcassets in Resources */,
 				8148DAE727E249010025863A /* Assets.xcassets in Resources */,
 			);
@@ -310,6 +316,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		812C04C927E6A89700799F93 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/VLCtvOSKit.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VLCtvOSKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		812C04CA27E6A94F00799F93 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8148DADB27E248FF0025863A /* Sources */ = {
