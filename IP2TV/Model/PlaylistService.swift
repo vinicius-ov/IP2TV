@@ -15,22 +15,21 @@ protocol PlaylistServiceCrud {
 }
 
 struct PlaylistService: PlaylistServiceCrud {
-        
+
     func create(playList: Playlist) {
-        
+
     }
-    
+
     func recover() -> [Playlist] {
         return []
     }
-    
+
     func update(playlist: Playlist) {
-        
+
     }
-    
+
     func delete(playlist: Playlist) {
-        
+
     }
-    
-    
+
 }

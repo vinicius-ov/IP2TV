@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		812C04CC27E6A9DC00799F93 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 812C04CB27E6A9DC00799F93 /* Cartfile */; };
+		812C04CF27E6AA3400799F93 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04CE27E6AA3400799F93 /* AudioToolbox.framework */; };
+		812C04D127E6AA3D00799F93 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04D027E6AA3D00799F93 /* AVFoundation.framework */; };
+		812C04D327E6AA4200799F93 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04D227E6AA4200799F93 /* CFNetwork.framework */; };
+		812C04D527E6AA4800799F93 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04D427E6AA4800799F93 /* CoreFoundation.framework */; };
+		812C04D727E6AA5300799F93 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04D627E6AA5300799F93 /* CoreGraphics.framework */; };
+		812C04D927E6AA5800799F93 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04D827E6AA5800799F93 /* CoreMedia.framework */; };
+		812C04DB27E6AA5E00799F93 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04DA27E6AA5E00799F93 /* CoreText.framework */; };
+		812C04DD27E6AA6300799F93 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04DC27E6AA6300799F93 /* CoreVideo.framework */; };
+		812C04DF27E6AA6900799F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04DE27E6AA6900799F93 /* Foundation.framework */; };
+		812C04E527E6AA9300799F93 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04E427E6AA9300799F93 /* OpenGLES.framework */; };
+		812C04E727E6AA9A00799F93 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04E627E6AA9A00799F93 /* QuartzCore.framework */; };
+		812C04E927E6AAA000799F93 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04E827E6AAA000799F93 /* Security.framework */; };
+		812C04EB27E6AAA500799F93 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04EA27E6AAA500799F93 /* VideoToolbox.framework */; };
+		812C04ED27E6AAAE00799F93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04EC27E6AAAE00799F93 /* UIKit.framework */; };
+		812C04F227E6AF1900799F93 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04EE27E6AADA00799F93 /* TVVLCKit.xcframework */; };
+		812C04F327E6AF1900799F93 /* TVVLCKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 812C04EE27E6AADA00799F93 /* TVVLCKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		812C04F927E8AB0300799F93 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C04F727E8AB0300799F93 /* VideoPlayerViewController.swift */; };
+		812C04FA27E8AB0300799F93 /* VideoPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812C04F827E8AB0300799F93 /* VideoPlayerViewController.xib */; };
 		8148DAE327E249000025863A /* IP2TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE227E249000025863A /* IP2TVApp.swift */; };
 		8148DAE527E249000025863A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148DAE427E249000025863A /* ContentView.swift */; };
 		8148DAE727E249010025863A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8148DAE627E249010025863A /* Assets.xcassets */; };
@@ -45,8 +63,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		812C04F427E6AF1900799F93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				812C04F327E6AF1900799F93 /* TVVLCKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		812C04CB27E6A9DC00799F93 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		812C04CE27E6AA3400799F93 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		812C04D027E6AA3D00799F93 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		812C04D227E6AA4200799F93 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		812C04D427E6AA4800799F93 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		812C04D627E6AA5300799F93 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		812C04D827E6AA5800799F93 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		812C04DA27E6AA5E00799F93 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		812C04DC27E6AA6300799F93 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		812C04DE27E6AA6900799F93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		812C04E027E6AA7000799F93 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		812C04E127E6AA7800799F93 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		812C04E227E6AA8700799F93 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		812C04E327E6AA8D00799F93 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		812C04E427E6AA9300799F93 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		812C04E627E6AA9A00799F93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		812C04E827E6AAA000799F93 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		812C04EA27E6AAA500799F93 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		812C04EC27E6AAAE00799F93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		812C04EE27E6AADA00799F93 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = Carthage/Build/TVVLCKit.xcframework; sourceTree = "<group>"; };
+		812C04F627E8A39200799F93 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		812C04F727E8AB0300799F93 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		812C04F827E8AB0300799F93 /* VideoPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlayerViewController.xib; sourceTree = "<group>"; };
 		8148DADF27E249000025863A /* IP2TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IP2TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8148DAE227E249000025863A /* IP2TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IP2TVApp.swift; sourceTree = "<group>"; };
 		8148DAE427E249000025863A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +130,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812C04D927E6AA5800799F93 /* CoreMedia.framework in Frameworks */,
+				812C04EB27E6AAA500799F93 /* VideoToolbox.framework in Frameworks */,
+				812C04F227E6AF1900799F93 /* TVVLCKit.xcframework in Frameworks */,
+				812C04DF27E6AA6900799F93 /* Foundation.framework in Frameworks */,
+				812C04D527E6AA4800799F93 /* CoreFoundation.framework in Frameworks */,
+				812C04E727E6AA9A00799F93 /* QuartzCore.framework in Frameworks */,
+				812C04ED27E6AAAE00799F93 /* UIKit.framework in Frameworks */,
+				812C04D327E6AA4200799F93 /* CFNetwork.framework in Frameworks */,
+				812C04D127E6AA3D00799F93 /* AVFoundation.framework in Frameworks */,
+				812C04E527E6AA9300799F93 /* OpenGLES.framework in Frameworks */,
+				812C04DB27E6AA5E00799F93 /* CoreText.framework in Frameworks */,
+				812C04D727E6AA5300799F93 /* CoreGraphics.framework in Frameworks */,
+				812C04CF27E6AA3400799F93 /* AudioToolbox.framework in Frameworks */,
+				812C04E927E6AAA000799F93 /* Security.framework in Frameworks */,
+				812C04DD27E6AA6300799F93 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,11 +169,37 @@
 			isa = PBXGroup;
 			children = (
 				812C04CB27E6A9DC00799F93 /* Cartfile */,
-				8197250027E52F7F00E7BA36 /* Info.plist */,
 				8148DAE227E249000025863A /* IP2TVApp.swift */,
 				8148DAE627E249010025863A /* Assets.xcassets */,
+				812C04F627E8A39200799F93 /* Bridging-Header.h */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		812C04CD27E6AA3400799F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				812C04EE27E6AADA00799F93 /* TVVLCKit.xcframework */,
+				812C04EC27E6AAAE00799F93 /* UIKit.framework */,
+				812C04EA27E6AAA500799F93 /* VideoToolbox.framework */,
+				812C04E827E6AAA000799F93 /* Security.framework */,
+				812C04E627E6AA9A00799F93 /* QuartzCore.framework */,
+				812C04E427E6AA9300799F93 /* OpenGLES.framework */,
+				812C04E327E6AA8D00799F93 /* libxml2.tbd */,
+				812C04E227E6AA8700799F93 /* libiconv.tbd */,
+				812C04E127E6AA7800799F93 /* libc++.tbd */,
+				812C04E027E6AA7000799F93 /* libbz2.tbd */,
+				812C04DE27E6AA6900799F93 /* Foundation.framework */,
+				812C04DC27E6AA6300799F93 /* CoreVideo.framework */,
+				812C04DA27E6AA5E00799F93 /* CoreText.framework */,
+				812C04D827E6AA5800799F93 /* CoreMedia.framework */,
+				812C04D627E6AA5300799F93 /* CoreGraphics.framework */,
+				812C04D427E6AA4800799F93 /* CoreFoundation.framework */,
+				812C04D227E6AA4200799F93 /* CFNetwork.framework */,
+				812C04D027E6AA3D00799F93 /* AVFoundation.framework */,
+				812C04CE27E6AA3400799F93 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8148DAD627E248FF0025863A = {
@@ -114,6 +209,7 @@
 				8148DAF227E249020025863A /* IP2TVTests */,
 				8148DAFC27E249020025863A /* IP2TVUITests */,
 				8148DAE027E249000025863A /* Products */,
+				812C04CD27E6AA3400799F93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +226,7 @@
 		8148DAE127E249000025863A /* IP2TV */ = {
 			isa = PBXGroup;
 			children = (
+				8197250027E52F7F00E7BA36 /* Info.plist */,
 				812C04C827E6A4B300799F93 /* Resources */,
 				8148DB0E27E24ADB0025863A /* Model */,
 				81E0AD1427E3CDFE00353EE2 /* Views */,
@@ -185,6 +282,8 @@
 				8148DB1127E37AF10025863A /* AddPlaylistView.swift */,
 				8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */,
 				8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */,
+				812C04F727E8AB0300799F93 /* VideoPlayerViewController.swift */,
+				812C04F827E8AB0300799F93 /* VideoPlayerViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +300,7 @@
 				8148DADD27E248FF0025863A /* Resources */,
 				812C04C927E6A89700799F93 /* Carthage */,
 				812C04CA27E6A94F00799F93 /* SwiftLint */,
+				812C04F427E6AF1900799F93 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				812C04CC27E6A9DC00799F93 /* Cartfile in Resources */,
+				812C04FA27E8AB0300799F93 /* VideoPlayerViewController.xib in Resources */,
 				8148DAEA27E249010025863A /* Preview Assets.xcassets in Resources */,
 				8148DAE727E249010025863A /* Assets.xcassets in Resources */,
 			);
@@ -326,13 +427,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/VLCtvOSKit.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VLCtvOSKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -366,6 +465,7 @@
 				81E0AD1027E3CBFB00353EE2 /* Service.swift in Sources */,
 				8148DB1027E24AF50025863A /* MediaItem.swift in Sources */,
 				8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */,
+				812C04F927E8AB0300799F93 /* VideoPlayerViewController.swift in Sources */,
 				8148DB1227E37AF10025863A /* AddPlaylistView.swift in Sources */,
 				8173511C27E4B052007B99AD /* PlaylistService.swift in Sources */,
 				81E0AD1227E3CD9C00353EE2 /* PlaylistsViewModel.swift in Sources */,
@@ -546,12 +646,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IP2TV/Resources/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -575,12 +677,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitreco.IP2TV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IP2TV/Resources/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};

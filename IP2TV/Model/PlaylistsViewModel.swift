@@ -8,9 +8,5 @@
 import Foundation
 
 struct PlaylistsViewModel {
-    
-    
-    
-    
-    
+
 }

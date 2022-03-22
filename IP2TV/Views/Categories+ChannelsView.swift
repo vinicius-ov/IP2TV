@@ -4,20 +4,18 @@
 //
 //  Created by Vinicius on 18/03/22.
 //
-//will display 2 colums, left colunm category, right column channels of given category
+// will display 2 colums, left colunm category, right column channels of given category
 
 import SwiftUI
 
-//let parsed: [MediaItem]? =
+// let parsed: [MediaItem]? =
 //    try? ParseM3uFileToMediaItemList.parse(contentsData: Data(contentsOf: URL(string: "asdasd")!))!
 
+struct CategoriesChannelsView: View {
 
-struct Categories_ChannelsView: View {
-    
     @State private var mediaItems: [MediaItem] = [MediaItem]()
     @State var mediaUrl: String
-    
-    
+
     var body: some View {
         NavigationView {
             HStack {
@@ -28,7 +26,8 @@ struct Categories_ChannelsView: View {
                     Text("Canais disponíveis").padding()
                     List(mediaItems) { item in
                         NavigationLink("\(item.tvgName ?? "") - \(item.mediaUrl ?? "")", destination: {
-                            VideoPlayerView(url: item.mediaUrl ?? "")
+                            //adapt for 4k
+                            VideoPlayerView(url: item.mediaUrl ?? "").frame(width: 1920, height: 1080, alignment: .center)
                         })
                     }
                 }.border(Color.blue)
@@ -37,10 +36,10 @@ struct Categories_ChannelsView: View {
             do {
                 guard let url = URL(string: mediaUrl) else {
                     return
-                    //show error
+                    // show error
                 }
-                //let (data, _) = try await URLSession.shared.data(from: url)
-                mediaItems = ParseM3uFileToMediaItemList.parse() ?? []
+                 let (data, _) = try await URLSession.shared.data(from: url)
+                mediaItems = ParseM3uFileToMediaItemList.parse(contentsData: data) ?? []
             } catch {
                 mediaItems = []
             }
@@ -48,9 +47,8 @@ struct Categories_ChannelsView: View {
     }
 }
 
-struct Categories_Channels_Previews: PreviewProvider {
+struct CategoriesChannels_Previews: PreviewProvider {
     static var previews: some View {
-        Categories_ChannelsView(mediaUrl: "")
+        CategoriesChannelsView(mediaUrl: "")
     }
 }
-

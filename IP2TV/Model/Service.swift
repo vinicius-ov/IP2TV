@@ -29,7 +29,7 @@ struct Service {
 
         let request = URLRequest(url: url)
 
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, _, error in
             guard let data = data else {
                 completionHandler(.failure(error!))
                 return
