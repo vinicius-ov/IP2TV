@@ -13,35 +13,60 @@ import SwiftUI
 
 struct CategoriesChannelsView: View {
 
-    @State private var mediaItems: [MediaItem] = [MediaItem]()
+    @State private var mediaCategories: [MediaCategory] = []
     @State var mediaUrl: String
+    @State var channelsForSelectedCategory: [MediaItem] = []
+    @State var isLoaderVisible: Bool = true
 
     var body: some View {
         NavigationView {
+//            VStack {
+//                ProgressView().scaleEffect(3.0, anchor: .center)
+//                    .progressViewStyle(CircularProgressViewStyle(tint: .purple))
+//                    .padding(.bottom, 80)
+//                Text("Carregando canais.").font(.system(size: 60))
+//                Text("Por favor espere...").font(.system(size: 60))
+//
+//            }.hidden(isLoaderVisible)
             HStack {
                 VStack {
-                    Text("Categorias")
+                    Text("Categorias").padding()
+                    List(mediaCategories) { item in
+                        Button(item.groupTitle) {
+                            channelsForSelectedCategory = item.channels
+                        }
+                    }
+
                 }.border(Color.red)
+
+                ProgressView().scaleEffect(3.0, anchor: .center)
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .purple))
+                                    .padding(.bottom, 80).hidden(isLoaderVisible)
+
                 VStack {
                     Text("Canais disponíveis").padding()
-                    List(mediaItems) { item in
+                    List(channelsForSelectedCategory) { item in
                         NavigationLink("\(item.tvgName ?? "") - \(item.mediaUrl ?? "")", destination: {
-                            //adapt for 4k
-                            VideoPlayerView(url: item.mediaUrl ?? "").frame(width: 1920, height: 1080, alignment: .center)
+                            // adapt for 4k
+                            VideoPlayerView(url: item.mediaUrl ?? "")
+                                .frame(width: 1920, height: 1080, alignment: .center)
                         })
+
                     }
                 }.border(Color.blue)
-            }.frame(width: 1000, height: 800, alignment: .center)
+            }.frame(width: 1800, height: 1000, alignment: .center)
         }.task {
             do {
                 guard let url = URL(string: mediaUrl) else {
                     return
                     // show error
                 }
-                 let (data, _) = try await URLSession.shared.data(from: url)
-                mediaItems = ParseM3uFileToMediaItemList.parse(contentsData: data) ?? []
+                let (data, _) = try await URLSession.shared.data(from: url)
+                mediaCategories = ParseM3uFileToMediaItemList.parse(contentsData: data)
+                channelsForSelectedCategory = mediaCategories.first?.channels ?? []
+                isLoaderVisible = false
             } catch {
-                mediaItems = []
+                mediaCategories = []
             }
         }
     }
@@ -50,5 +75,15 @@ struct CategoriesChannelsView: View {
 struct CategoriesChannels_Previews: PreviewProvider {
     static var previews: some View {
         CategoriesChannelsView(mediaUrl: "")
+    }
+}
+
+extension View {
+    @ViewBuilder func hidden(_ shouldShow: Bool) -> some View {
+        switch shouldShow {
+        case true: self
+        case false:
+            self.hidden()
+        }
     }
 }

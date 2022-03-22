@@ -39,6 +39,7 @@
 		8173511F27E4B3A7007B99AD /* IP2TVModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8173511D27E4B3A6007B99AD /* IP2TVModel.xcdatamodeld */; };
 		8173515E27E4B653007B99AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173515D27E4B653007B99AD /* Persistence.swift */; };
 		8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */; };
+		819399EB27EA54D400564816 /* MediaCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819399EA27EA54D400564816 /* MediaCategory.swift */; };
 		819724FF27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */; };
 		8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */; };
 		81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */; };
@@ -117,6 +118,7 @@
 		8173511E27E4B3A6007B99AD /* IP2TVModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IP2TVModel.xcdatamodel; sourceTree = "<group>"; };
 		8173515D27E4B653007B99AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+ChannelsView.swift"; sourceTree = "<group>"; };
+		819399EA27EA54D400564816 /* MediaCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCategory.swift; sourceTree = "<group>"; };
 		819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseM3uFileToMediaItemList.swift; sourceTree = "<group>"; };
 		8197250027E52F7F00E7BA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				8173511D27E4B3A6007B99AD /* IP2TVModel.xcdatamodeld */,
 				8173515D27E4B653007B99AD /* Persistence.swift */,
 				819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */,
+				819399EA27EA54D400564816 /* MediaCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				819724FF27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift in Sources */,
 				8148DAE527E249000025863A /* ContentView.swift in Sources */,
 				8173511F27E4B3A7007B99AD /* IP2TVModel.xcdatamodeld in Sources */,
+				819399EB27EA54D400564816 /* MediaCategory.swift in Sources */,
 				81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */,
 				8173515E27E4B653007B99AD /* Persistence.swift in Sources */,
 				8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */,
