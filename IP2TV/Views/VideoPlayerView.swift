@@ -16,7 +16,7 @@ struct VideoPlayerView: View {
         ZStack {
             VideoPlayerViewControllerRepresentable(url: mediaItem.mediaUrl ?? "")
                 .frame(width: 1920, height: 1080, alignment: .center)
-            //VideoControlsOverlayView(mediaItemId: mediaItem.id)
+//            VideoControlsOverlayView(mediaItemId: mediaItem.id)
         }
     }
 }

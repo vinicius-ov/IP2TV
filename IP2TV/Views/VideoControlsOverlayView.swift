@@ -7,15 +7,23 @@
 
 import SwiftUI
 
+class FavoriteChannelStatus: ObservableObject {
+    @Published var isFavorited: Bool
+    @Published var favoritedChannel: FavoriteChannel?
+
+    init(isFavorited: Bool, favoritedChannel: FavoriteChannel?) {
+        self.isFavorited = isFavorited
+        self.favoritedChannel = favoritedChannel
+    }
+}
+
 struct VideoControlsOverlayView: View {
 
     @State var isPlaying: Bool = true
     @State private var elapsedTime = 0
     @State private var isMute: Bool = false
     @State private var mediaItem: MediaItem?
-    //@State private var favoriteChannelStatus: FavoriteChannelStatus
-    @State private var isFavorited: Bool = false
-    @State private var favoritedChannel: FavoriteChannel?
+    //@StateObject private var favoriteChannelStatus: FavoriteChannelStatus
 
     @Environment(\.managedObjectContext) var managedObjectContext
 
@@ -23,10 +31,11 @@ struct VideoControlsOverlayView: View {
 
     init(mediaItemId: String) {
         _fetchedChannels = FetchRequest(sortDescriptors: [],
-                                       predicate: NSPredicate(format: "id == %@", mediaItemId)
-        )
-        _favoritedChannel.wrappedValue = _fetchedChannels.wrappedValue.first
-        _isFavorited.wrappedValue = _fetchedChannels.wrappedValue.isEmpty
+                                       predicate: NSPredicate(format: "id == %@", mediaItemId))
+
+//        _favoriteChannelStatus = StateObject(wrappedValue:
+//                                                FavoriteChannelStatus(isFavorited: !_fetchedChannels.wrappedValue.isEmpty,
+//                                                                      favoritedChannel: _fetchedChannels.wrappedValue.first))
     }
 
     var body: some View {
@@ -57,26 +66,26 @@ struct VideoControlsOverlayView: View {
 
             Button(action: {
 
-                if !isFavorited {
-                    let favoriteChannel = FavoriteChannel(context: managedObjectContext)
-                    favoriteChannel.id = UUID()
-                    favoriteChannel.tvgName = mediaItem?.tvgName ?? ""
-                    favoriteChannel.mediaUrl = mediaItem?.mediaUrl ?? ""
-                    favoritedChannel = favoriteChannel
-                    isFavorited = true
-                } else {
-                    guard let channel = favoritedChannel else { return }
-                    managedObjectContext.delete(channel)
-                    isFavorited = true
-                }
-                PersistenceController.shared.saveContext()
+//                if !favoriteChannelStatus.isFavorited {
+//                    let favoriteChannel = FavoriteChannel(context: managedObjectContext)
+//                    favoriteChannel.id = UUID()
+//                    favoriteChannel.tvgName = mediaItem?.tvgName ?? ""
+//                    favoriteChannel.mediaUrl = mediaItem?.mediaUrl ?? ""
+//                    favoriteChannelStatus.favoritedChannel = favoriteChannel
+//                    favoriteChannelStatus.isFavorited = true
+//                } else {
+//                    guard let channel = favoriteChannelStatus.favoritedChannel else { return }
+//                    managedObjectContext.delete(channel)
+//                    favoriteChannelStatus.isFavorited = false
+//                }
+//                PersistenceController.shared.saveContext()
 
             }, label: {
-                if isFavorited {
+//                if favoriteChannelStatus.isFavorited {
                     Image(systemName: "star.fill")
-                } else {
-                    Image(systemName: "star")
-                }
+//                } else {
+//                    Image(systemName: "star")
+//                }
             })
 
             Text("\(elapsedTime)")
