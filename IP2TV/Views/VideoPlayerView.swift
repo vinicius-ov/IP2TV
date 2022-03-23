@@ -2,29 +2,30 @@
 //  VideoPlayerView.swift
 //  IP2TV
 //
-//  Created by Vinicius on 19/03/22.
+//  Created by Vinicius Valvassori on 3/23/22.
 //
 
 import SwiftUI
 
-struct VideoPlayerView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = VideoPlayerViewController
+struct VideoPlayerView: View {
 
-    @State var url: String
+    @State var mediaItem: MediaItem
 
-    func makeUIViewController(context: Context) -> VideoPlayerViewController {
-        VideoPlayerViewController(videoPath: url)
-    }
-
-    func updateUIViewController(_ viewController: VideoPlayerViewController,
-                                context: Context) {
-        // Nothing to do here, since our view controller is
-        // read-only from the outside.
+    var body: some View {
+        // adapt for 4k
+        ZStack {
+            VideoPlayerViewControllerRepresentable(url: mediaItem.mediaUrl ?? "")
+                .frame(width: 1920, height: 1080, alignment: .center)
+            //VideoControlsOverlayView(mediaItemId: mediaItem.id)
+        }
     }
 }
 
 struct VideoPlayerView_Previews: PreviewProvider {
+
+
     static var previews: some View {
-        VideoPlayerView(url: "http::\\\\")
+        let mediaItem: MediaItem = MediaItem()
+        VideoPlayerView(mediaItem: mediaItem)
     }
 }

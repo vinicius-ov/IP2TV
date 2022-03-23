@@ -41,10 +41,12 @@
 		8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */; };
 		819399EB27EA54D400564816 /* MediaCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819399EA27EA54D400564816 /* MediaCategory.swift */; };
 		819724FF27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */; };
-		8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */; };
+		8197250227E66E2D00E7BA36 /* VideoPlayerViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8197250127E66E2D00E7BA36 /* VideoPlayerViewControllerRepresentable.swift */; };
 		81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */; };
 		81E0AD1027E3CBFB00353EE2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD0F27E3CBFB00353EE2 /* Service.swift */; };
 		81E0AD1227E3CD9C00353EE2 /* PlaylistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0AD1127E3CD9C00353EE2 /* PlaylistsViewModel.swift */; };
+		F27C959927EB61D800E64E3C /* VideoControlsOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C959827EB61D700E64E3C /* VideoControlsOverlayView.swift */; };
+		F27C959B27EBAC0200E64E3C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C959A27EBAC0200E64E3C /* VideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,10 +123,12 @@
 		819399EA27EA54D400564816 /* MediaCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCategory.swift; sourceTree = "<group>"; };
 		819724FE27E50A7E00E7BA36 /* ParseM3uFileToMediaItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseM3uFileToMediaItemList.swift; sourceTree = "<group>"; };
 		8197250027E52F7F00E7BA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		8197250127E66E2D00E7BA36 /* VideoPlayerViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistListView.swift; sourceTree = "<group>"; };
 		81E0AD0F27E3CBFB00353EE2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		81E0AD1127E3CD9C00353EE2 /* PlaylistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewModel.swift; sourceTree = "<group>"; };
+		F27C959827EB61D700E64E3C /* VideoControlsOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlsOverlayView.swift; sourceTree = "<group>"; };
+		F27C959A27EBAC0200E64E3C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,9 +288,11 @@
 				81E0AD0D27E3CA6500353EE2 /* PlaylistListView.swift */,
 				8148DB1127E37AF10025863A /* AddPlaylistView.swift */,
 				8173515F27E4F772007B99AD /* Categories+ChannelsView.swift */,
-				8197250127E66E2D00E7BA36 /* VideoPlayerView.swift */,
+				F27C959A27EBAC0200E64E3C /* VideoPlayerView.swift */,
+				8197250127E66E2D00E7BA36 /* VideoPlayerViewControllerRepresentable.swift */,
 				812C04F727E8AB0300799F93 /* VideoPlayerViewController.swift */,
 				812C04F827E8AB0300799F93 /* VideoPlayerViewController.xib */,
+				F27C959827EB61D700E64E3C /* VideoControlsOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -466,7 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E0AD1027E3CBFB00353EE2 /* Service.swift in Sources */,
+				F27C959927EB61D800E64E3C /* VideoControlsOverlayView.swift in Sources */,
 				8148DB1027E24AF50025863A /* MediaItem.swift in Sources */,
+				F27C959B27EBAC0200E64E3C /* VideoPlayerView.swift in Sources */,
 				8173516027E4F772007B99AD /* Categories+ChannelsView.swift in Sources */,
 				812C04F927E8AB0300799F93 /* VideoPlayerViewController.swift in Sources */,
 				8148DB1227E37AF10025863A /* AddPlaylistView.swift in Sources */,
@@ -478,7 +486,7 @@
 				819399EB27EA54D400564816 /* MediaCategory.swift in Sources */,
 				81E0AD0E27E3CA6500353EE2 /* PlaylistListView.swift in Sources */,
 				8173515E27E4B653007B99AD /* Persistence.swift in Sources */,
-				8197250227E66E2D00E7BA36 /* VideoPlayerView.swift in Sources */,
+				8197250227E66E2D00E7BA36 /* VideoPlayerViewControllerRepresentable.swift in Sources */,
 				8148DAE327E249000025863A /* IP2TVApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,12 @@ import TVVLCKit
 
 class VideoPlayerViewController: UIViewController {
 
-    var mediaListPlayer = VLCMediaListPlayer()
+    var mediaPlayer = VLCMediaPlayer()
     var media: VLCMedia!
     var videoFilePath: String = ""
+    var location: CGPoint?
+
+    @IBOutlet weak var movieView: UIView!
 
     init(videoPath: String) {
         super.init(nibName: "VideoPlayerViewController", bundle: Bundle.main)
@@ -31,28 +34,47 @@ class VideoPlayerViewController: UIViewController {
     }
 
     private func setupMedia() {
-        // let videoFileURL = URL(string: "http://efv.me:80/ViniciusValvassori/j7SCr5/13253")
 
         guard let videoFileURL = URL(string: videoFilePath) else { return }
 
-        mediaListPlayer.mediaPlayer.delegate = self
-        mediaListPlayer.mediaPlayer.drawable = self.view
+        //mediaListPlayer.mediaPlayer.drawable = movieView
+        mediaPlayer.drawable = self.view
 
         media = VLCMedia(url: videoFileURL)
-        let mediaList = VLCMediaList()
 
-        mediaList.add(media)
-        mediaListPlayer.mediaList = mediaList
-        mediaListPlayer.play(media)
+        mediaPlayer.media = media
+        mediaPlayer.play()
         // toggleHud(self)
     }
 
     private func stopActivity() {
-        mediaListPlayer.stop()
+        mediaPlayer.stop()
     }
 
-}
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        guard let press = presses.first else { return }
+        switch press.type {
+        case .playPause:
+            if mediaPlayer.isPlaying {
+                mediaPlayer.pause()
+            } else {
+                mediaPlayer.play()
+            }
+        default: break
+        }
+    }
 
-extension VideoPlayerViewController: VLCMediaPlayerDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location: CGPoint = touches.first?.location(in: self.view) else { return }
+        self.location = location
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location: CGPoint = touches.first?.location(in: self.view) else { return }
+        if location.y + 50 > (self.location?.y ?? 0) + 20 {
+            //show overlay
+            print("must show overlay")
+        }
+    }
 
 }

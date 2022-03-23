@@ -22,7 +22,7 @@ struct ParseM3uFileToMediaItemList {
 
             let infos = Array(lines[index].components(separatedBy: "\""))
             mediaItem.build(infos)
-            mediaItem.mediaUrl = lines[index+1]
+            mediaItem.mediaUrl = lines[index+1].replacingOccurrences(of: "\r", with: "")
 
             var added = false
 
