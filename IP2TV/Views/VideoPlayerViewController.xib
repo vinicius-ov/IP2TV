@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="19529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoPlayerViewController" customModule="IP2TV" customModuleProvider="target">
+            <connections>
+                <outlet property="movieView" destination="r6w-tu-KXo" id="VSk-J3-JLC"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-tu-KXo">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="r6w-tu-KXo" secondAttribute="bottom" id="MuW-55-h9B"/>
+                <constraint firstItem="r6w-tu-KXo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XEg-PN-oPZ"/>
+                <constraint firstAttribute="trailing" secondItem="r6w-tu-KXo" secondAttribute="trailing" id="cUo-Gz-hwn"/>
+                <constraint firstItem="r6w-tu-KXo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nQH-qF-jVY"/>
+            </constraints>
+            <point key="canvasLocation" x="167" y="-43"/>
+        </view>
+    </objects>
+</document>

@@ -10,16 +10,16 @@ import CoreData
 
 struct PlaylistListView: View {
     @State var canNavigate: Bool = false
-    
+
     @Environment(\.managedObjectContext) var managedObjectContext
-    
+
     @FetchRequest(
         entity: Playlist.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Playlist.name, ascending: true),
+            NSSortDescriptor(keyPath: \Playlist.name, ascending: true)
         ]
     ) var playlists: FetchedResults<Playlist>
-    
+
     var body: some View {
         NavigationView {
             HStack {
@@ -28,13 +28,13 @@ struct PlaylistListView: View {
                         AddPlaylistView(playlistName: "valendo", playlistUrl: "http://s.blueplay.me/zdpuFO")
                     }
                     NavigationLink("Limpar playlists (TBD)", isActive: $canNavigate) {
-                        //AddPlaylistView(playlistName: "", playlistUrl: "")
+                        // AddPlaylistView(playlistName: "", playlistUrl: "")
                     }
                 }.border(Color.green).frame(width: 600, height: 300, alignment: .center)
                 List(playlists, id: \.id) { item in
                     VStack {
                         NavigationLink {
-                            Categories_ChannelsView(mediaUrl: item.url ?? "")
+                            CategoriesChannelsView(mediaUrl: item.url ?? "")
                         } label: {
                             Text(item.name ?? "").foregroundColor(Color.green)
                             Text(item.url ?? "").foregroundColor(Color.green)

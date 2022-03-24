@@ -10,10 +10,10 @@ import SwiftUI
 struct AddPlaylistView: View {
     @State var playlistName: String
     @State var playlistUrl: String
-    
+
     @Environment(\.managedObjectContext) var managedObjectContext
     @Environment(\.presentationMode) var presentationMode
-    
+
     var body: some View {
         VStack {
             Text("Nova playlist").font(.system(size: 50)).padding()
@@ -24,7 +24,7 @@ struct AddPlaylistView: View {
                     print("valores vazios")
                     return
                 }
-                
+
                 let playlist: Playlist = Playlist(context: managedObjectContext)
                 playlist.id = UUID()
                 playlist.name = playlistName

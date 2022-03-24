@@ -11,7 +11,7 @@ import SwiftUI
 struct IP2TVApp: App {
     let persistenceController = PersistenceController.shared
     @Environment(\.scenePhase) var scenePhase
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
